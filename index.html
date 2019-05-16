@@ -9,12 +9,29 @@
 </head>
 <body>
     <main class="main">
-        <header class="header"></header>
+        <header class="header">
+            <button class="header__hamburger"><span></span></button>
+            <nav class="navigation">
+                <ul class="navigation__list">
+                    <li class="navigation__item navigation__item--active">
+                        <a class="navigation__link" href="#">О нас</a>
+                        <div class="submenu"></div>
+                    </li>
+                    <li class="navigation__item">
+                        <a class="navigation__link" href="#">Новости</a>
+                    </li>
+                    <li class="navigation__item">
+                        <a class="navigation__link" href="#">Контакты</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
         <div class="main-container">
             <div class="main-content"></div>
             <div class="sidebar"></div>
         </div>
         <footer class="footer"></footer>
     </main>
+    <script src="js/scripts.js"></script>
 </body>
 </html>
