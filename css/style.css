@@ -1,0 +1,84 @@
+@font-face {
+  font-family: "Open Sans";
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src: local('Open Sans Regular'), local('OpenSans-Regular'),
+  url("fonts/open-sans-regular.woff2") format("woff2"),
+  url("fonts/open-sans-regular.ttf") format("ttf");
+}
+
+@font-face {
+  font-family: "Open Sans";
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+  src: local('Open Sans SemiBold'), local('OpenSans-SemiBold'),
+  url("fonts/open-sans-600.woff2") format("woff2"),
+  url("fonts/open-sans-600.ttf") format("ttf");
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  backface-visibility: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  /*css - переменные*/
+  --white: #ffffff;
+}
+/* применение var(--color-blue); */
+
+.visually-hidden:not(:focus):not(active) {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.main {
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 21px;
+  color: #000000;
+  font-style: normal;
+  font-weight: 400;
+  background-color: #ffffff;
+  width: 1440px;
+  min-width: 1440px;
+  display: flex;
+  flex-wrap: nowrap;
+  margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
+  color: #000000;
+  outline: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* Чтобы менять цвета у svg из спрайта*/
+
+*:not(.socials, .svg-sprite) svg path {
+  fill: inherit;
+}
