@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <title>Название проекта</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/two-level-mobile-menu.css" rel="stylesheet">
+</head>
+<body>
+    <main class="main">
+        <header class="header">
+            <button class="header__hamburger js-mobile-menu-hamburger"><span></span></button>
+            <nav class="navigation">
+                <ul class="navigation__list">
+                    <li class="navigation__item navigation__item--active js-drop-menu">
+                        <a class="navigation__link" href="#">О нас</a>
+                        <ul class="submenu js-submenu">
+                            <li class="submenu__item">
+                                <a class="submenu__link" href="#">Подпункт меню</a>
+                            </li>
+                            <li class="submenu__item">
+                                <a class="submenu__link" href="#">Подпункт меню</a>
+                            </li>
+                            <li class="submenu__item">
+                                <a class="submenu__link" href="#">Подпункт меню</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="navigation__item">
+                        <a class="navigation__link" href="#">Новости</a>
+                    </li>
+                    <li class="navigation__item js-drop-menu">
+                        <a class="navigation__link" href="#">Контакты</a>
+                        <ul class="submenu">
+                            <li class="submenu__item">
+                                <a class="submenu__link" href="#">Подпункт меню</a>
+                            </li>
+                            <li class="submenu__item">
+                                <a class="submenu__link" href="#">Подпункт меню</a>
+                            </li>
+                            <li class="submenu__item">
+                                <a class="submenu__link" href="#">Подпункт меню</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <div class="main-container">
+            <div class="main-content">
+                <button id="button">Кнопка</button>
+            </div>
+            <div class="sidebar"></div>
+        </div>
+        <footer class="footer"></footer>
+    </main>
+    <script src="plugins/jquery-3.4.1.min.js"></script>
+    <script src="js/two-level-mobile-menu.js"></script>
+</body>
+</html>
