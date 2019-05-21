@@ -1,0 +1,230 @@
+@font-face {
+  font-family: "Open Sans";
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src: local('Open Sans Regular'), local('OpenSans-Regular'),
+  url("fonts/open-sans-regular.woff2") format("woff2"),
+  url("fonts/open-sans-regular.ttf") format("ttf");
+}
+
+@font-face {
+  font-family: "Open Sans";
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+  src: local('Open Sans SemiBold'), local('OpenSans-SemiBold'),
+  url("fonts/open-sans-600.woff2") format("woff2"),
+  url("fonts/open-sans-600.ttf") format("ttf");
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  backface-visibility: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  /*css - переменные*/
+  --white: #ffffff;
+}
+/* применение var(--color-blue); */
+
+.visually-hidden:not(:focus):not(active) {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.main {
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 21px;
+  color: #000000;
+  font-style: normal;
+  font-weight: 400;
+  background-color: #ffffff;
+  width: 1440px;
+  min-width: 1440px;
+  margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
+  color: #000000;
+  outline: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* Чтобы менять цвета у svg из спрайта*/
+
+*:not(.socials, .svg-sprite) svg path {
+  fill: inherit;
+}
+
+/*////////////*/
+
+.header {
+  min-height: 60px;
+  background-color: blueviolet;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  /*position: sticky;
+  position: -webkit-sticky;
+  top: 0;*/
+}
+
+.navigation__list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.navigation__item {
+  width: 100px;
+  text-align: center;
+}
+
+.navigation__link {
+  display: block;
+  color: #ffffff;
+  height: 40px;
+}
+
+/* Мобильное меню - бургер */
+
+.header__hamburger {
+  display: none;
+}
+
+@media (max-width: 480px) {
+  .main {
+    width: 100%;
+    min-width: 100%;
+  }
+
+  .navigation {
+    display: none;
+    width: 100%;
+  }
+
+  .navigation__item,
+  .navigation__link {
+    width: 100%;
+  }
+
+  .navigation.open {
+    display: block;
+  }
+
+  .header__hamburger {
+    flex-shrink: 0;
+    display: block;
+    width: 60px;
+    height: 60px;
+    padding: 5px 12px;
+    background-color: transparent;
+    border: 0;
+    border-radius: 0;
+    cursor: pointer;
+    outline: none;
+    margin: 0 0 0 auto;
+  }
+
+  .header__hamburger span {
+    width: 100%;
+    background-color: var(--white);
+    height: 2px;
+    display: block;
+    position: relative;
+  }
+
+  .header__hamburger span:after,
+  .header__hamburger span:before {
+    content: "";
+    position: absolute;
+    display: block;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--white);
+  }
+
+  .header__hamburger span:before {
+    top: -9px;
+  }
+
+  .header__hamburger span:after {
+    bottom: -9px;
+  }
+
+  .header__hamburger.open span {
+    background: transparent;
+  }
+
+  .header__hamburger.open span:before,
+  .header__hamburger.open span:after {
+    transition-duration: 0.2s, 0.2s;
+    transition-delay: 0.2s, 0s;
+  }
+
+  .header__hamburger.open span:before {
+    transition-property: top, transform;
+  }
+
+  .header__hamburger.open span:after {
+    transition-property: bottom, transform;
+  }
+
+  .header__hamburger.open span:before {
+    top: 0;
+    transform: rotate(45deg);
+  }
+
+  .header__hamburger.open span:after {
+    bottom: 0;
+    transform: rotate(-45deg);
+  }
+
+  .header__hamburger.open span:before,
+  .header__hamburger.open span:after {
+    transition-delay: 0s, 0.2s;
+  }
+}
+
+/*//////////////*/
+
+.slider {
+  margin: 30px 0;
+}
+
+.slider__content {
+  height: 200px;
+  background-color: forestgreen;
+  margin: 0 10px;
+}
+
+
+
